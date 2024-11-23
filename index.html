@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Domineering Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Domineering Game</h1>
+    <!-- Rules section -->
+    <div id="rules">
+        <h2>Game Rules</h2>
+        <ul>
+            <li><strong>Players:</strong> This game is played between a player (you) and the computer.</li>
+            <li><strong>Objective:</strong> The goal is to place your domino pieces on the board, blocking your opponent from making a move.</li>
+            <li><strong>Player Move:</strong> You can place your domino pieces <b>vertically</b>.</li>
+            <li><strong>Computer Move:</strong> The computer places its domino pieces <b>horizontally</b>.</li>
+            <li><strong>Placing Dominoes:</strong> Each domino occupies two adjacent cells. Once a cell is occupied, it cannot be used again.</li>
+            <li><strong>Winning Condition:</strong> The game ends when one player cannot make a valid move. The last player to successfully place a domino wins!</li>
+        </ul>
+        <p>Now that you know the rules, go ahead and try to outsmart the computer!</p>
+    </div>
+
+    <!-- Board Dimension Selector - Positioned above the game board -->
+    <div id="board-size-selector">
+        <h2>Select Board Dimensions</h2>
+        <label for="rows">Rows (3-8):</label>
+        <input type="number" id="rows" min="3" max="8" value="3">
+        <label for="cols">Columns (3-8):</label>
+        <input type="number" id="cols" min="3" max="8" value="3">
+        <button id="set-board-size">Set Board Size</button>
+    </div>
+
+    <div id="status">Player's turn</div>
+    <!-- Game Board -->
+    <div id="board"></div>    
+    <!-- Reset Button -->
+    <button id="reset">Reset Game</button>
+
+
+    <audio id="move-sound" src="click.mp3"></audio>
+<audio id="win-sound" src="win.mp3"></audio>
+<audio id="lose-sound" src="lose.mp3"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
